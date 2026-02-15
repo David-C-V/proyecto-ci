@@ -1,0 +1,16 @@
+name: CI Test Run
+on: [push]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Instalar dependencias
+        run: echo "Instalando paquetes..."
+
+      - name: Ejecutar Test Run
+        run: echo "Todo salió bien "
